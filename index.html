@@ -3,11 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/bootstrap.min.js"></script>
+    <script defer src="./js/main.js"></script>
     <title>E청소년</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <h1 class="logo">
+          <img src="./public/Logo.png" alt="E청소년 로고" />
+        </h1>
+        <div class="right">
+          <div class="util-inner">
+            <div class="search">
+              <div class="search-container">
+                <form ="role" ="search">
+                  <input
+                    type="search"
+                    placeholder="청소년활동을 검색해 보세요!"
+                    aria-label="Search"
+                  />
+                  <button class="search-btn" type="submit">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 21L15 15M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
+                        stroke="#232527"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <ul class="util">
+              <li>
+                <a href="javascript:void(0)">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 8V6C9 5.46957 9.21071 4.96086 9.58579 4.58579C9.96086 4.21071 10.4696 4 11 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H11C10.4696 20 9.96086 19.7893 9.58579 19.4142C9.21071 19.0391 9 18.5304 9 18V16"
+                      stroke="#232527"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 12H16M16 12L13 9M16 12L13 15"
+                      stroke="#232527"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>로그인</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
+                      stroke="#232527"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>회원가입</p>
+                </a>
+              </li>
+              <li>
+                <a class="link" href="javascript:void(0)">
+                  <p>업무지원서비스</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <nav class="gnb">
+            <ul class="d-flex mb-0">
+              <li class="nav-item">
+                <a href="#">청소년 활동</a>
+                <div class="mega-menu">
+                  <div class="mega-left">
+                    <h3>청소년 활동</h3>
+                  </div>
+                  <div class="mega-right">
+                    <ul>
+                      <li><a href="#">청소년활동 찾기</a></li>
+                      <li><a href="#">청소년자기도전포상제</a></li>
+                      <li><a href="#">청소년정책참여</a></li>
+                      <li><a href="#">청소년활동 참여후기</a></li>
+                      <li><a href="#">자유학기제활동 찾기</a></li>
+                      <li><a href="#">청소년수련활동 인증제</a></li>
+                      <li><a href="#">청소년방과후아카데미</a></li>
+                      <li><a href="#">청소년자원봉사 Dovol</a></li>
+                      <li><a href="#">청소년수련활동 신고제</a></li>
+                      <li><a href="#">청소년지도사 종합정보</a></li>
+                      <li><a href="#">국제청소년성취포상제</a></li>
+                      <li><a href="#">청소년국제교류</a></li>
+                      <li><a href="#">우수프로그램지원사업</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">청소년 지킴이</a>
+                <div class="mega-menu">
+                  <div class="mega-left">
+                    <h3>청소년 지킴이</h3>
+                  </div>
+                  <div class="mega-right">
+                    <ul>
+                      <li><a href="#">청소년상담</a></li>
+                      <li><a href="#">인터넷·스마트폰 과의존 치유</a></li>
+                      <li><a href="#">이주배경 청소년 지원</a></li>
+                      <li><a href="#">학교 밖 청소년 지원</a></li>
+                      <li><a href="#">청소년 근로권익 보호</a></li>
+                      <li><a href="#">청소년관련법 안내</a></li>
+                      <li><a href="#">가정 밖 청소년 지원</a></li>
+                      <li><a href="#">아동/청소년 성보호</a></li>
+                      <li><a href="#">정서행동 힐링치유</a></li>
+                      <li><a href="#">청소년유해환경 개선</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">활동기관 안내</a>
+                <div class="mega-menu">
+                  <div class="mega-left">
+                    <h3>활동기관 안내</h3>
+                  </div>
+                  <div class="mega-right">
+                    <ul>
+                      <li><a href="#">우리동네 활동기관</a></li>
+                      <li><a href="#">인증활동 운영기관</a></li>
+                      <li><a href="#">성취포상활동 운영기관</a></li>
+                      <li><a href="#">자원봉사 dovol터전</a></li>
+                      <li><a href="#">시도 청소년활동진흥센터</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">수련시설평가</a>
+                <div class="mega-menu">
+                  <div class="mega-left">
+                    <h3>수련시설평가</h3>
+                  </div>
+                  <div class="mega-right">
+                    <ul>
+                      <li><a href="#">수련시설 종합평가 안내</a></li>
+                      <li><a href="#">수련시설 종합평가 결과</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">e청소년 안내</a>
+                <div class="mega-menu">
+                  <div class="mega-left">
+                    <h3>수련시설평가</h3>
+                  </div>
+                  <div class="mega-right">
+                    <ul>
+                      <li><a href="#">e청소년 안내</a></li>
+                      <li><a href="#">e청소년 게시판</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </body>
 </html>

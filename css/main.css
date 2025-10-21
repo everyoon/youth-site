@@ -1,0 +1,130 @@
+/* header */
+.header {
+  position: relative;
+  padding: 12px 64px 8px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.util-inner {
+  display: flex;
+  align-items: center;
+  gap: 125px;
+}
+.search {
+  width: 280px;
+}
+.search-container {
+  display: flex;
+  border: 1px solid #111;
+  border-radius: 24px;
+  padding: 8px 12px;
+  justify-content: space-between;
+}
+.search-container form {
+  display: flex;
+  width: 100%;
+}
+.search-container input {
+  flex: 1;
+  border: none;
+  font-size: 0.813rem;
+}
+.search-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.util {
+  display: flex;
+  gap: 16px;
+}
+.util li a {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.28;
+}
+.util li .link {
+  height: 100%;
+  align-self: flex-end;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.gnb ul {
+  list-style: none;
+  padding-left: 0;
+  gap: 40px;
+}
+.gnb .nav-item a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+}
+.mega-menu {
+  position: absolute;
+  margin-top: -2px;
+  left: 0;
+  top: 100%;
+  background: #fbfbfe;
+  width: 100%;
+  border-radius: 0 0 120px 0;
+  z-index: 10;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.nav-item.active .mega-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav-item > a:hover,
+.nav-item > a:focus {
+  color: #ff6100;
+}
+.mega-menu {
+  max-height: 300px;
+}
+.mega-left {
+  background: url(../assets/images/gnb_bg.jpg) no-repeat center/cover;
+  width: 400px;
+  height: 300px;
+}
+.mega-left h3 {
+  padding: 72px 0 0 72px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.28px;
+}
+.mega-right {
+  display: flex;
+  width: 100%;
+  padding: 72px 0 72px 72px;
+}
+.mega-right ul {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  column-gap: 120px;
+}
+.gnb .mega-right a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+.mega-right a:hover,
+.mega-menu a:focus {
+  color: #ff6100;
+}
