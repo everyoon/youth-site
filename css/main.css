@@ -272,3 +272,114 @@ body {
   justify-content: center;
   transition: all 0.3s ease;
 }
+
+/* contents 1 */
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 120px 0;
+  margin: 0 auto;
+  max-width: 1360px;
+}
+.contents .title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  padding-bottom: 40px;
+}
+.quick-list {
+  display: flex;
+  justify-content: space-between;
+}
+.quick-item a {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.quick-item .icon {
+  width: 64px;
+  height: 64px;
+}
+.quick-item .icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* dovol */
+.dovol-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.dovol-inner .left {
+  width: 563px;
+  height: 480px;
+}
+.dovol-inner .carousel-inner img {
+  border-radius: 32px;
+}
+.dovol-inner .carousel-indicators {
+  display: flex;
+  gap: 6px;
+}
+.dovol-inner .carousel-indicators button {
+  border: none;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background-clip: padding-box;
+  background: #eaded6;
+}
+.dovol-inner .carousel-indicators button.active {
+  background: #ff6100;
+}
+.dovol-inner .right {
+  width: 751px;
+  border-radius: 32px;
+  background: #6da7b5 url(../assets/images/dovol_bg.jpg) no-repeat;
+  background-position: 298px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 32px;
+}
+.dovol-inner .title-inner {
+  display: flex;
+  gap: 12px;
+}
+.dovol-inner .title-inner h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  color: #fbfbfe;
+}
+.dovol-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.dovol-item a {
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+  line-height: 1.28;
+  align-items: center;
+  color: #fbfbfe;
+}
+.dovol-item .icon {
+  width: 64px;
+  height: 64px;
+}
+.dovol-item .icon svg {
+  width: 64px;
+  height: 64px;
+}
