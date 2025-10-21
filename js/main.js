@@ -33,3 +33,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// hero- section
+let currentSlide = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const progressBar = document.querySelector(".pagination-progress");
+const totalSlides = slides.length;
+const slideCounter = document.getElementById("currentSlide");
+
+function updateSlide(index) {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+  slideCounter.textContent = String(index + 1).padStart(2, "0");
+
+  // 프로그레스 바 업데이트 (1페이지당 33.33%)
+  const progressWidth = ((index + 1) / totalSlides) * 100;
+  progressBar.style.width = progressWidth + "%";
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlide(currentSlide);
+}
+
+document.getElementById("nextBtn").addEventListener("click", nextSlide);
+document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+// Auto-play
+let autoplayInterval = setInterval(nextSlide, 5000);
+
+// Pause on hover
+document.querySelector(".hero-section").addEventListener("mouseenter", () => {
+  clearInterval(autoplayInterval);
+});
+
+document.querySelector(".hero-section").addEventListener("mouseleave", () => {
+  autoplayInterval = setInterval(nextSlide, 5000);
+});
