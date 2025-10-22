@@ -9,25 +9,50 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/bootstrap.min.js"></script>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/calendar.js"></script>
+    <script defer src="./js/notice.js"></script>
     <title>E청소년</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header-inner">
-        <h1 class="logo">
-          <img src="./public/Logo.png" alt="E청소년 로고" />
-        </h1>
-        <div class="right">
-          <div class="util-inner">
-            <div class="search">
-              <div class="search-container">
-                <form ="role" ="search">
-                  <input
-                    type="search"
-                    placeholder="청소년활동을 검색해 보세요!"
-                    aria-label="Search"
-                  />
-                  <button class="search-btn" type="submit">
+    <div class="wrap">
+      <header class="header">
+        <div class="header-inner">
+          <h1 class="logo">
+            <img src="./public/Logo.png" alt="E청소년 로고" />
+          </h1>
+          <div class="right">
+            <div class="util-inner">
+              <div class="search">
+                <div class="search-container">
+                  <form ="role" ="search">
+                    <input
+                      type="search"
+                      placeholder="청소년활동을 검색해 보세요!"
+                      aria-label="Search"
+                    />
+                    <button class="search-btn" type="submit">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 21L15 15M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
+                          stroke="#232527"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <ul class="util">
+                <li>
+                  <a href="javascript:void(0)">
                     <svg
                       width="24"
                       height="24"
@@ -36,172 +61,149 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M21 21L15 15M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
+                        d="M9 8V6C9 5.46957 9.21071 4.96086 9.58579 4.58579C9.96086 4.21071 10.4696 4 11 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H11C10.4696 20 9.96086 19.7893 9.58579 19.4142C9.21071 19.0391 9 18.5304 9 18V16"
+                        stroke="#232527"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 12H16M16 12L13 9M16 12L13 15"
                         stroke="#232527"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
                     </svg>
-                  </button>
-                </form>
-              </div>
+                    <p>로그인</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
+                        stroke="#232527"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p>회원가입</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="link" href="javascript:void(0)">
+                    <p>업무지원서비스</p>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <ul class="util">
-              <li>
-                <a href="javascript:void(0)">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9 8V6C9 5.46957 9.21071 4.96086 9.58579 4.58579C9.96086 4.21071 10.4696 4 11 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H11C10.4696 20 9.96086 19.7893 9.58579 19.4142C9.21071 19.0391 9 18.5304 9 18V16"
-                      stroke="#232527"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 12H16M16 12L13 9M16 12L13 15"
-                      stroke="#232527"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p>로그인</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
-                      stroke="#232527"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p>회원가입</p>
-                </a>
-              </li>
-              <li>
-                <a class="link" href="javascript:void(0)">
-                  <p>업무지원서비스</p>
-                </a>
-              </li>
-            </ul>
+            <nav class="gnb">
+              <ul class="d-flex mb-0">
+                <li class="nav-item">
+                  <a href="#">청소년 활동</a>
+                  <div class="mega-menu">
+                    <div class="mega-left">
+                      <h3>청소년 활동</h3>
+                    </div>
+                    <div class="mega-right">
+                      <ul>
+                        <li><a href="#">청소년활동 찾기</a></li>
+                        <li><a href="#">청소년자기도전포상제</a></li>
+                        <li><a href="#">청소년정책참여</a></li>
+                        <li><a href="#">청소년활동 참여후기</a></li>
+                        <li><a href="#">자유학기제활동 찾기</a></li>
+                        <li><a href="#">청소년수련활동 인증제</a></li>
+                        <li><a href="#">청소년방과후아카데미</a></li>
+                        <li><a href="#">청소년자원봉사 Dovol</a></li>
+                        <li><a href="#">청소년수련활동 신고제</a></li>
+                        <li><a href="#">청소년지도사 종합정보</a></li>
+                        <li><a href="#">국제청소년성취포상제</a></li>
+                        <li><a href="#">청소년국제교류</a></li>
+                        <li><a href="#">우수프로그램지원사업</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#">청소년 지킴이</a>
+                  <div class="mega-menu">
+                    <div class="mega-left">
+                      <h3>청소년 지킴이</h3>
+                    </div>
+                    <div class="mega-right">
+                      <ul>
+                        <li><a href="#">청소년상담</a></li>
+                        <li><a href="#">인터넷·스마트폰 과의존 치유</a></li>
+                        <li><a href="#">이주배경 청소년 지원</a></li>
+                        <li><a href="#">학교 밖 청소년 지원</a></li>
+                        <li><a href="#">청소년 근로권익 보호</a></li>
+                        <li><a href="#">청소년관련법 안내</a></li>
+                        <li><a href="#">가정 밖 청소년 지원</a></li>
+                        <li><a href="#">아동/청소년 성보호</a></li>
+                        <li><a href="#">정서행동 힐링치유</a></li>
+                        <li><a href="#">청소년유해환경 개선</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#">활동기관 안내</a>
+                  <div class="mega-menu">
+                    <div class="mega-left">
+                      <h3>활동기관 안내</h3>
+                    </div>
+                    <div class="mega-right">
+                      <ul>
+                        <li><a href="#">우리동네 활동기관</a></li>
+                        <li><a href="#">인증활동 운영기관</a></li>
+                        <li><a href="#">성취포상활동 운영기관</a></li>
+                        <li><a href="#">자원봉사 dovol터전</a></li>
+                        <li><a href="#">시도 청소년활동진흥센터</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#">수련시설평가</a>
+                  <div class="mega-menu">
+                    <div class="mega-left">
+                      <h3>수련시설평가</h3>
+                    </div>
+                    <div class="mega-right">
+                      <ul>
+                        <li><a href="#">수련시설 종합평가 안내</a></li>
+                        <li><a href="#">수련시설 종합평가 결과</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#">e청소년 안내</a>
+                  <div class="mega-menu">
+                    <div class="mega-left">
+                      <h3>수련시설평가</h3>
+                    </div>
+                    <div class="mega-right">
+                      <ul>
+                        <li><a href="#">e청소년 안내</a></li>
+                        <li><a href="#">e청소년 게시판</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav class="gnb">
-            <ul class="d-flex mb-0">
-              <li class="nav-item">
-                <a href="#">청소년 활동</a>
-                <div class="mega-menu">
-                  <div class="mega-left">
-                    <h3>청소년 활동</h3>
-                  </div>
-                  <div class="mega-right">
-                    <ul>
-                      <li><a href="#">청소년활동 찾기</a></li>
-                      <li><a href="#">청소년자기도전포상제</a></li>
-                      <li><a href="#">청소년정책참여</a></li>
-                      <li><a href="#">청소년활동 참여후기</a></li>
-                      <li><a href="#">자유학기제활동 찾기</a></li>
-                      <li><a href="#">청소년수련활동 인증제</a></li>
-                      <li><a href="#">청소년방과후아카데미</a></li>
-                      <li><a href="#">청소년자원봉사 Dovol</a></li>
-                      <li><a href="#">청소년수련활동 신고제</a></li>
-                      <li><a href="#">청소년지도사 종합정보</a></li>
-                      <li><a href="#">국제청소년성취포상제</a></li>
-                      <li><a href="#">청소년국제교류</a></li>
-                      <li><a href="#">우수프로그램지원사업</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="#">청소년 지킴이</a>
-                <div class="mega-menu">
-                  <div class="mega-left">
-                    <h3>청소년 지킴이</h3>
-                  </div>
-                  <div class="mega-right">
-                    <ul>
-                      <li><a href="#">청소년상담</a></li>
-                      <li><a href="#">인터넷·스마트폰 과의존 치유</a></li>
-                      <li><a href="#">이주배경 청소년 지원</a></li>
-                      <li><a href="#">학교 밖 청소년 지원</a></li>
-                      <li><a href="#">청소년 근로권익 보호</a></li>
-                      <li><a href="#">청소년관련법 안내</a></li>
-                      <li><a href="#">가정 밖 청소년 지원</a></li>
-                      <li><a href="#">아동/청소년 성보호</a></li>
-                      <li><a href="#">정서행동 힐링치유</a></li>
-                      <li><a href="#">청소년유해환경 개선</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="#">활동기관 안내</a>
-                <div class="mega-menu">
-                  <div class="mega-left">
-                    <h3>활동기관 안내</h3>
-                  </div>
-                  <div class="mega-right">
-                    <ul>
-                      <li><a href="#">우리동네 활동기관</a></li>
-                      <li><a href="#">인증활동 운영기관</a></li>
-                      <li><a href="#">성취포상활동 운영기관</a></li>
-                      <li><a href="#">자원봉사 dovol터전</a></li>
-                      <li><a href="#">시도 청소년활동진흥센터</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="#">수련시설평가</a>
-                <div class="mega-menu">
-                  <div class="mega-left">
-                    <h3>수련시설평가</h3>
-                  </div>
-                  <div class="mega-right">
-                    <ul>
-                      <li><a href="#">수련시설 종합평가 안내</a></li>
-                      <li><a href="#">수련시설 종합평가 결과</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="#">e청소년 안내</a>
-                <div class="mega-menu">
-                  <div class="mega-left">
-                    <h3>수련시설평가</h3>
-                  </div>
-                  <div class="mega-right">
-                    <ul>
-                      <li><a href="#">e청소년 안내</a></li>
-                      <li><a href="#">e청소년 게시판</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </nav>
         </div>
-      </div>
-    </header>
-    <div class="wrap">
+      </header>
       <section class="hero-section">
         <div class="hero-slide hero-slide1 active">
           <div class="hero-content">
@@ -278,7 +280,7 @@
           </div>
         </div>
       </section>
-      <section class="contents">
+      <section class="contents quick">
         <div class="quick-inner">
           <h3 class="title">주요 페이지 바로가기</h3>
           <ul class="quick-list">
@@ -704,6 +706,526 @@
           </div>
         </div>
       </section>
+      <section class="contents acti">
+        <h3 class="title">최근 등록된 체험활동</h3>
+        <ul class="acti-list">
+          <li>
+            <div class="img">
+              <img
+                src="./assets/images/acti1.jpg"
+                alt="지키자 구하자 지구! 이미지"
+              />
+            </div>
+            <div class="desc">
+              <p class="desc-title">지키자 구하자 지구!</p>
+              <div class="desc-inner">
+                <p class="text">
+                  <span class="sub">지역</span>
+                  <span>강원특별자치도 원주시</span>
+                </p>
+                <p class="text">
+                  <span class="sub">활동일시</span>
+                  <span>2028-09 -01</span>
+                </p>
+                <p class="text">
+                  <span class="sub">인원</span>
+                  <span>20명</span>
+                </p>
+                <p class="text">
+                  <span class="sub">연령</span>
+                  <span>초등학생</span>
+                </p>
+              </div>
+              <button class="btn">자세히 보기</button>
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <img
+                src="./assets/images/acti2.jpg"
+                alt="청심 글로벌 플러스 캠프 (고등학교 2박3일) 이미지"
+              />
+            </div>
+            <div class="desc">
+              <p class="desc-title">
+                청심 글로벌 플러스 캠프 (고등학교 2박3일)
+              </p>
+              <div class="desc-inner">
+                <p class="text">
+                  <span class="sub">지역</span>
+                  <span>경기도 가평군</span>
+                </p>
+                <p class="text">
+                  <span class="sub">활동일시</span>
+                  <span>2028-08-28 - 2028-08-30</span>
+                </p>
+                <p class="text">
+                  <span class="sub">인원</span>
+                  <span>500명</span>
+                </p>
+                <p class="text">
+                  <span class="sub">연령</span>
+                  <span>고등학생</span>
+                </p>
+              </div>
+              <button class="btn">자세히 보기</button>
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <img
+                src="./assets/images/acti3.jpg"
+                alt="우리 가족 티셔츠 드로잉 이미지"
+              />
+            </div>
+            <div class="desc">
+              <p class="desc-title">우리 가족 티셔츠 드로잉</p>
+              <div class="desc-inner">
+                <p class="text">
+                  <span class="sub">지역</span>
+                  <span>인천광역시 서구</span>
+                </p>
+                <p class="text">
+                  <span class="sub">활동일시</span>
+                  <span>2028-09-28</span>
+                </p>
+                <p class="text">
+                  <span class="sub">인원</span>
+                  <span>20명</span>
+                </p>
+                <p class="text">
+                  <span class="sub">연령</span>
+                  <span>초등학생</span>
+                </p>
+              </div>
+              <button class="btn">자세히 보기</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="contents volunteer">
+        <h3 class="title">봉사활동 찾기</h3>
+        <div class="content-wrapper">
+          <div class="search-section">
+            <div class="select-box">
+              <select>
+                <option>지역을 선택하세요</option>
+                <option>서울특별시</option>
+                <option>부산광역시</option>
+                <option>대구광역시</option>
+                <option>인천광역시</option>
+                <option>광주광역시</option>
+                <option>대전광역시</option>
+                <option>울산광역시</option>
+                <option>세종특별자치시</option>
+                <option>경기도</option>
+                <option>강원도</option>
+                <option>충청북도</option>
+                <option>충청남도</option>
+                <option>전라북도</option>
+                <option>전라남도</option>
+                <option>경상북도</option>
+                <option>경상남도</option>
+                <option>제주특별자치도</option>
+              </select>
+            </div>
+            <div class="select-box">
+              <select>
+                <option>세부 지역을 선택하세요</option>
+                <option>강서구</option>
+                <option>금정구</option>
+                <option>기장군</option>
+                <option>남구</option>
+                <option>동구</option>
+                <option>동래구</option>
+                <option>부산진구</option>
+                <option>북구</option>
+                <option>사상구</option>
+                <option>사하구</option>
+                <option>서구</option>
+                <option>수영구</option>
+                <option>연제구</option>
+                <option>영도구</option>
+                <option>중구</option>
+                <option>해운대구</option>
+              </select>
+            </div>
+            <button class="search-btn">검색하기</button>
+          </div>
+          <div class="main-content">
+            <div class="calendar-section">
+              <div class="calendar-header">
+                <button id="prevMonth">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 5L8 12L15 19"
+                      stroke="#232527"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <span id="currentMonth">2028 08</span>
+                <button id="nextMonth">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="#232527"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <table class="calendar-table">
+                <thead>
+                  <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                  </tr>
+                </thead>
+                <tbody id="calendarBody"></tbody>
+              </table>
+            </div>
+
+            <div class="event-list-section">
+              <div class="event-list-title">8월 26일 봉사활동</div>
+              <div class="event-card">
+                <div class="event-card-header">
+                  <span class="event-category badge-purple">돌봄/생활</span>
+                  <span class="event-status">모집중</span>
+                </div>
+                <div class="event-title">동래요양원 어르신 미용 봉사</div>
+                <div class="event-details">
+                  2028.08.26<br />
+                  부산광역시 금정구 산성로 967 (장전동) 장전동
+                </div>
+                <button class="event-apply-btn">신청하기</button>
+                <div style="clear: both"></div>
+              </div>
+              <div class="event-card">
+                <div class="event-card-header">
+                  <span class="event-category badge-blue">교육/재능</span>
+                  <span class="event-status">모집중</span>
+                </div>
+                <div class="event-title">
+                  방과후아카데미 학습 멘토링 및 활동보조 지도
+                </div>
+                <div class="event-details">
+                  2028.08.26<br />
+                  수영구청소년문화의집 및 수영역 일대
+                </div>
+                <button class="event-apply-btn">신청하기</button>
+                <div style="clear: both"></div>
+              </div>
+              <div class="event-card">
+                <div class="event-card-header">
+                  <span class="event-category badge-green">환경/지역</span>
+                  <span class="event-status">모집중</span>
+                </div>
+                <div class="event-title">
+                  2028년 기장군청소년어울마당 체험부스 운영
+                </div>
+                <div class="event-details">
+                  2028.08.25 - 2028.08.26<br />
+                  정관읍 중앙공원(정관읍 구연3로 27)
+                </div>
+                <button class="event-apply-btn">신청하기</button>
+                <div style="clear: both"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contents notice">
+        <h3 class="title">공지사항</h3>
+        <div class="category-nav">
+          <button class="category-btn active" data-category="전체">전체</button>
+          <button class="category-btn" data-category="E청소년">E청소년</button>
+          <button class="category-btn" data-category="봉사">봉사</button>
+          <button class="category-btn" data-category="포상">포상</button>
+          <button class="category-btn" data-category="인증">인증</button>
+          <button class="category-btn" data-category="신고">신고</button>
+          <button class="category-btn" data-category="교류">교류</button>
+          <button class="category-btn" data-category="참여">참여</button>
+          <button class="category-btn" data-category="방과후">방과후</button>
+          <button class="category-btn" data-category="지도사">지도사</button>
+        </div>
+        <div class="notices-grid" id="noticesGrid"></div>
+      </section>
+      <section class="contents event">
+        <div class="left">
+          <div class="title-inner">
+            <h4>교육 연수 자료실</h4>
+            <button class="more-btn">더보기 ></button>
+          </div>
+          <table>
+            <tr>
+              <td class="text">
+                <a href="#">
+                  (직무역량실습 양식) 2028년 청소년지도사 자격연수 직무역량 향상
+                  실습_1급
+                </a>
+              </td>
+              <td class="date">2028-02-04</td>
+            </tr>
+            <tr>
+              <td class="text">
+                <a href="#">
+                  (활동지도안 양식) 2028년 청소년지도사 자격연수 활동지도안
+                  실습_3급
+                </a>
+              </td>
+              <td class="date">2028-01-20</td>
+            </tr>
+            <tr>
+              <td class="text">
+                <a href="#">
+                  (기획서 양식) 2028년 청소년지도사 자격연수 기획서 실습_2급
+                </a>
+              </td>
+              <td class="date">2028-01-20</td>
+            </tr>
+            <tr>
+              <td class="text">
+                <a href="#">
+                  (직무역량실습 양식) 2027년 청소년지도사 자격연수 직무역량 향상
+                  실습_1급
+                </a>
+              </td>
+              <td class="date">2027-04-17</td>
+            </tr>
+            <tr>
+              <td class="text">
+                <a href="#">
+                  (활동지도안 양식) 2024년 청소년지도사 자격연수 활동지도안
+                  실습_3급
+                </a>
+              </td>
+              <td class="date">2027-01-23</td>
+            </tr>
+          </table>
+        </div>
+        <div class="right">
+          <div class="title-inner">
+            <h4>이벤트 소식</h4>
+            <button class="more-btn">더보기 ></button>
+          </div>
+          <div id="eventSlide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#eventSlide"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#eventSlide"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#eventSlide"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="#">
+                  <img
+                    src="./assets/images/event_slide01.png"
+                    alt="청소년수련시설 종사자를 위한 마음건강 EAP지원 사업"
+                  />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/event_slide02.png"
+                    alt="청소년 수련활동인증제 데이터 활용 아이디어 공모전"
+                  />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/event_slide03.png"
+                    alt="학교 교육과정 청소년활동 연계 사례공모전"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contents other">
+        <div class="other-inner">
+          <h3 class="title">공지사항</h3>
+          <ul class="other-list">
+            <li><img src="./assets/images/mini1.png" alt="장식 도형1" /></li>
+            <li class="other-item"><a href="#">만나이 계산하기</a></li>
+            <li class="other-item"><a href="#">자주 묻는 질문</a></li>
+            <li><img src="./assets/images/mini2.png" alt="장식 도형2" /></li>
+            <li class="other-item"><a href="#">묻고 답하기</a></li>
+            <li class="other-item">
+              <a href="#">신고/인증제 부정운영 제보 하기</a>
+            </li>
+            <li><img src="./assets/images/mini3.png" alt="장식 도형3" /></li>
+            <li class="other-item"><a href="#">챗봇 상담하기</a></li>
+          </ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="gnb-inner">
+            <ul class="gnb">
+              <li><a href="#">e청소년 안내</a></li>
+              <li><a href="#">오시는 길</a></li>
+              <li><a href="#">자원봉사 문의처 찾기</a></li>
+            </ul>
+            <div class="btn-inner">
+              <div class="footer-btn">
+                <button class="toggle-button" onclick="toggleCenterList(event)">
+                  시도 청소년활동진흥센터
+                  <span
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 15L12 8L19 15"
+                        stroke="#232527"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <ul id="centerList" class="center-list">
+                  <li><a href="#">서울특별시 청소년활동진흥센터</a></li>
+                  <li><a href="#">부산광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">대구광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">인천광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">광주광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">대전광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">울산광역시 청소년활동진흥센터</a></li>
+                  <li><a href="#">세종특별자치시 청소년활동진흥센터</a></li>
+                  <li><a href="#">경기도 청소년활동진흥센터</a></li>
+                  <li><a href="#">강원특별자치도 청소년활동진흥센터</a></li>
+                  <li><a href="#">충청북도 청소년활동진흥센터</a></li>
+                  <li><a href="#">충청남도 청소년활동진흥센터</a></li>
+                  <li><a href="#">전북특별자치도 청소년활동진흥센터</a></li>
+                  <li><a href="#">전라남도 청소년활동진흥센터</a></li>
+                  <li><a href="#">경상북도 청소년활동진흥센터</a></li>
+                  <li><a href="#">경상남도 청소년활동진흥센터</a></li>
+                  <li><a href="#">제주특별자치도 청소년활동진흥센터</a></li>
+                </ul>
+              </div>
+              <div class="footer-btn">
+                <button class="toggle-button" onclick="toggleSystemList(event)">
+                  청소년 관련 시스템 및 포털
+                  <span
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 15L12 8L19 15"
+                        stroke="#232527"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <ul id="systemList" class="system-list">
+                  <li><a href="#">국제교류네트워크</a></li>
+                  <li><a href="#">청소년방과후아카데미</a></li>
+                  <li><a href="#">청소년참여포털</a></li>
+                  <li><a href="#">청소년지도사종합정보시스템</a></li>
+                  <li><a href="#">청소년활동통합시스템 바로가기</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="info-inner">
+            <div class="text-inner">
+              <div class="text-left">
+                <p class="text">손연기</p>
+                <p class="text">TEL 02-330-2800</p>
+                <p class="text">FAX 02-6430-0914</p>
+              </div>
+              <div class="text-right">
+                <p class="text">사업자등록번호 106-82-14832</p>
+                <p class="text">
+                  (03752) 서울특별시 서대문구 경기대로 47 한국청소년활동진흥원
+                </p>
+              </div>
+            </div>
+            <div class="logo-inner">
+              <div class="footer-logo">
+                <img
+                  src="./assets/images/footer_logo1.png"
+                  alt="성평등가족부"
+                />
+              </div>
+              <div class="footer-logo">
+                <img
+                  src="./assets/images/footer_logo2.png"
+                  alt="한국청소년활동진흥원"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="gnb-inner">
+            <ul class="util">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">뷰어다운로드</a></li>
+            </ul>
+            <p class="copy">
+              Copyright © 2025 Korea Youth Work Agency. All rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

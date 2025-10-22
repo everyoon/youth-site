@@ -135,6 +135,9 @@ img {
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;

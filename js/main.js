@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 키보드 접근성
+    // 키보드
     item.addEventListener("focusin", () => {
       clearTimeout(closeTimer);
       item.classList.add("active");
@@ -75,3 +75,36 @@ document.querySelector(".hero-section").addEventListener("mouseenter", () => {
 document.querySelector(".hero-section").addEventListener("mouseleave", () => {
   autoplayInterval = setInterval(nextSlide, 5000);
 });
+
+// footer -list toggle
+function toggleList(listId, button) {
+  const list = document.getElementById(listId);
+  const allLists = document.querySelectorAll(".center-list, .system-list");
+  const allButtons = document.querySelectorAll(".toggle-button svg");
+
+  allLists.forEach((otherList) => {
+    if (otherList !== list) otherList.style.display = "none";
+  });
+
+  allButtons.forEach((svg) => {
+    svg.style.transform = "rotate(0deg)";
+    svg.style.transition = "transform 0.3s ease";
+  });
+
+  if (list.style.display === "block") {
+    list.style.display = "none";
+  } else {
+    list.style.display = "block";
+
+    const svg = button.querySelector("svg");
+    if (svg) svg.style.transform = "rotate(180deg)";
+  }
+}
+
+function toggleCenterList(event) {
+  toggleList("centerList", event.currentTarget);
+}
+
+function toggleSystemList(event) {
+  toggleList("systemList", event.currentTarget);
+}
