@@ -1,8 +1,3 @@
-body {
-  height: 2000px;
-}
-.wrap {
-}
 /* header */
 .header {
   width: 100%;
@@ -44,15 +39,22 @@ body {
   width: 100%;
 }
 .search-container input {
+  background: transparent;
   flex: 1;
   border: none;
   font-size: 0.813rem;
 }
+.search-container input:focus {
+  outline: none;
+}
 .search-container .search-btn {
   display: flex;
-  background: none;
+  background: transparent;
   border: none;
   padding: 0;
+}
+.search-container .search-btn:hover {
+  background: transparent;
 }
 .search-container .search-btn svg {
   width: 18px;
@@ -401,6 +403,7 @@ body {
   gap: 16px;
 }
 .acti-list li {
+  width: 33.333%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -503,8 +506,8 @@ body {
 }
 
 .select-box::after {
-  content: "";
-  background-image: url("../assets/icons/down.svg");
+  content: '';
+  background-image: url('../assets/icons/down.svg');
   width: 24px;
   height: 24px;
   position: absolute;
